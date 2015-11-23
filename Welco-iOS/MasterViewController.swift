@@ -1,6 +1,6 @@
 //
 //  MasterViewController.swift
-//  try
+//  Welco-iOS
 //
 //  Created by 安部 晴彦 on 2015/11/21.
 //  Copyright © 2015年 安部 晴彦. All rights reserved.
