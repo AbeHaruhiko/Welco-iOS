@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Master-->
+        <!--社員一覧-->
         <scene sceneID="pY4-Hu-kfo">
             <objects>
-                <navigationController title="Master" id="RMx-3f-FxP" sceneMemberID="viewController">
+                <navigationController title="社員一覧" id="RMx-3f-FxP" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Pmd-2v-anx">
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
@@ -22,10 +22,10 @@
             </objects>
             <point key="canvasLocation" x="-38" y="-630"/>
         </scene>
-        <!--Detail-->
+        <!--面会社員-->
         <scene sceneID="yUG-lL-AsK">
             <objects>
-                <viewController title="Detail" id="JEX-9P-axG" customClass="DetailViewController" customModule="Welco" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="面会社員" id="JEX-9P-axG" customClass="DetailViewController" customModule="Welco" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SYR-Wa-9uf"/>
                         <viewControllerLayoutGuide type="bottom" id="GAO-Cl-Wes"/>
@@ -52,7 +52,7 @@
                                 <animations/>
                                 <state key="normal" title="次へ"/>
                                 <connections>
-                                    <segue destination="HdT-Kx-BSg" kind="custom" customClass="FromMemberDetailToCompanyNameSegue" customModule="Welco" customModuleProvider="target" id="ya8-Lh-Acb"/>
+                                    <segue destination="s2I-kk-KE5" kind="custom" customClass="FromMemberDetailToCompanyNameSegue" customModule="Welco" customModuleProvider="target" id="ya8-Lh-Acb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -65,19 +65,19 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
+                    <navigationItem key="navigationItem" id="mOI-FS-AaM"/>
                     <connections>
                         <outlet property="detailDescriptionLabel" destination="0XM-y9-sOw" id="deQ-Na-JPF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="263"/>
+            <point key="canvasLocation" x="737" y="129"/>
         </scene>
-        <!--View Controller-->
+        <!--会社名入力-->
         <scene sceneID="e5g-Gf-Ibx">
             <objects>
-                <viewController id="HdT-Kx-BSg" sceneMemberID="viewController">
+                <viewController title="会社名入力" id="HdT-Kx-BSg" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YHG-GA-qO0"/>
                         <viewControllerLayoutGuide type="bottom" id="KxL-o9-rRI"/>
@@ -86,48 +86,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <glkView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" enableSetNeedsDisplay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bS5-Ai-Xds" customClass="PPSSignatureView">
-                                <rect key="frame" x="117" y="125" width="240" height="128"/>
+                            <glkView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bS5-Ai-Xds" customClass="PPSSignatureView">
+                                <rect key="frame" x="28" y="72" width="544" height="448"/>
                                 <animations/>
                             </glkView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjj-dw-bqx">
+                                <rect key="frame" x="44" y="534" width="75" height="42"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="もどる"/>
+                                <connections>
+                                    <segue destination="H1p-Uh-vWS" kind="custom" customClass="FromMemberDetailToCompanyNameSegue" customModule="Welco" customModuleProvider="target" id="TJe-JX-ktk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="bS5-Ai-Xds" firstAttribute="leading" secondItem="0k9-k2-vTc" secondAttribute="leadingMargin" constant="8" id="MEZ-TO-cd6"/>
                             <constraint firstItem="bS5-Ai-Xds" firstAttribute="top" secondItem="YHG-GA-qO0" secondAttribute="bottom" constant="8" id="SUD-i9-e5g"/>
+                            <constraint firstItem="KxL-o9-rRI" firstAttribute="top" secondItem="pjj-dw-bqx" secondAttribute="bottom" constant="24" id="WHp-zG-win"/>
+                            <constraint firstItem="pjj-dw-bqx" firstAttribute="leading" secondItem="0k9-k2-vTc" secondAttribute="leadingMargin" constant="24" id="tPv-25-NDd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bS5-Ai-Xds" secondAttribute="trailing" constant="8" id="tU2-iQ-ldu"/>
-                            <constraint firstItem="KxL-o9-rRI" firstAttribute="top" secondItem="bS5-Ai-Xds" secondAttribute="bottom" constant="40" id="v1U-gZ-l1F"/>
+                            <constraint firstItem="KxL-o9-rRI" firstAttribute="top" secondItem="bS5-Ai-Xds" secondAttribute="bottom" constant="80" id="v1U-gZ-l1F"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Nmh-zx-Ba0"/>
+                    <navigationItem key="navigationItem" title="備え付けのタッチペンまたは指で会社名を入力してください" id="Nmh-zx-Ba0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bYe-gX-wpq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="1023"/>
-        </scene>
-        <!--GLKit View Controller-->
-        <scene sceneID="Wm9-VR-EuX">
-            <objects>
-                <glkViewController preferredFramesPerSecond="30" id="Ox8-gA-TN0" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="kLD-Oc-d9h"/>
-                        <viewControllerLayoutGuide type="bottom" id="K5G-vt-Kf6"/>
-                    </layoutGuides>
-                    <glkView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" id="eJY-2E-y1Y" customClass="PPSSignatureView">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <connections>
-                            <outlet property="delegate" destination="Ox8-gA-TN0" id="VUH-UZ-NRr"/>
-                        </connections>
-                    </glkView>
-                    <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                </glkViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ylz-V6-1Es" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1465" y="939"/>
+            <point key="canvasLocation" x="767" y="893"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">
@@ -143,10 +131,10 @@
             </objects>
             <point key="canvasLocation" x="-856" y="-330"/>
         </scene>
-        <!--Master-->
+        <!--社員一覧-->
         <scene sceneID="smW-Zh-WAh">
             <objects>
-                <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" customModule="Welco" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="社員一覧" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" customModule="Welco" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -184,7 +172,7 @@
                             <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8"/>
+                    <navigationItem key="navigationItem" title="社員一覧" id="Zdf-7t-Un8"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="parseClassName" value="Member"/>
                     </userDefinedRuntimeAttributes>
@@ -193,10 +181,10 @@
             </objects>
             <point key="canvasLocation" x="709" y="-630"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--面会社員-->
         <scene sceneID="r7l-gg-dq7">
             <objects>
-                <navigationController id="vC3-pB-5Vb" sceneMemberID="viewController">
+                <navigationController title="面会社員" id="vC3-pB-5Vb" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="DjV-YW-jjY">
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
@@ -208,6 +196,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-45" y="129"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RoS-VL-JRQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s2I-kk-KE5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xbW-XV-I3V">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HdT-Kx-BSg" kind="relationship" relationship="rootViewController" id="nju-hU-PHk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lmt-ng-Exu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-45" y="893"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
