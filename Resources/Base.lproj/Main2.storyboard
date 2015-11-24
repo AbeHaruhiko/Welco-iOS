@@ -46,6 +46,14 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmN-X4-5aq">
+                                <rect key="frame" x="272" y="317" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="次へ"/>
+                                <connections>
+                                    <segue destination="Vha-EI-qgN" kind="push" id="KZm-GO-jYY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -63,7 +71,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="709" y="129"/>
+            <point key="canvasLocation" x="653" y="263"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="nRp-ny-KmR">
+            <objects>
+                <tableViewController id="i8E-kR-FjO" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Root View Controller" id="ykH-X2-nue"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6xP-kj-l9G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="854" y="1016"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rR6-bZ-1F9">
+            <objects>
+                <navigationController id="Vha-EI-qgN" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="8Y7-4g-w8d"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uak-6c-Sci">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="i8E-kR-FjO" kind="relationship" relationship="rootViewController" id="kI7-wv-2SV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JIH-z9-dWW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="82" y="1126"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">
