@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import Parse
 
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
 
-    var detailItem: AnyObject? {
+    var detailItem: PFObject? {
         didSet {
             // Update the view.
             self.configureView()
@@ -22,9 +23,13 @@ class DetailViewController: UIViewController {
 
     func configureView() {
         // Update the user interface for the detail item.
-        if let detail = self.detailItem {
+        if let detail: PFObject = self.detailItem {
             if let label = self.detailDescriptionLabel {
-                label.text = detail.description
+                label.text = (detail["name"] as? String)! + "とご面会ですね？"
+            }
+        } else {
+            if let label = self.detailDescriptionLabel {
+                label.text = "いらしゃいませ。\nご面会予定の社員を選択してください。"
             }
         }
     }
