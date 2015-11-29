@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--社員一覧-->
+        <!--社員一覧 Nav-->
         <scene sceneID="pY4-Hu-kfo">
             <objects>
-                <navigationController title="社員一覧" id="RMx-3f-FxP" sceneMemberID="viewController">
+                <navigationController title="社員一覧 Nav" id="RMx-3f-FxP" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Pmd-2v-anx">
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
@@ -76,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="737" y="129.00000000000003"/>
         </scene>
-        <!--会社名入力-->
+        <!--社名入力-->
         <scene sceneID="e5g-Gf-Ibx">
             <objects>
-                <viewController title="会社名入力" id="HdT-Kx-BSg" customClass="CompanyNameViewController" customModule="Welco" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="社名入力" id="HdT-Kx-BSg" customClass="CompanyNameViewController" customModule="Welco" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YHG-GA-qO0"/>
                         <viewControllerLayoutGuide type="bottom" id="KxL-o9-rRI"/>
@@ -203,10 +203,10 @@
             </objects>
             <point key="canvasLocation" x="709" y="-630"/>
         </scene>
-        <!--面会社員-->
+        <!--面会社員 Nav-->
         <scene sceneID="r7l-gg-dq7">
             <objects>
-                <navigationController title="面会社員" id="vC3-pB-5Vb" sceneMemberID="viewController">
+                <navigationController title="面会社員 Nav" id="vC3-pB-5Vb" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="DjV-YW-jjY">
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
@@ -219,10 +219,10 @@
             </objects>
             <point key="canvasLocation" x="-45" y="129.00000000000003"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--社名入力 Nav-->
         <scene sceneID="RoS-VL-JRQ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s2I-kk-KE5" sceneMemberID="viewController">
+                <navigationController title="社名入力 Nav" automaticallyAdjustsScrollViewInsets="NO" id="s2I-kk-KE5" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xbW-XV-I3V">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -250,7 +250,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <glkView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Je-hR-TCE" customClass="PPSSignatureView">
+                            <glkView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" enableSetNeedsDisplay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Je-hR-TCE" customClass="PPSSignatureView">
                                 <rect key="frame" x="28" y="88" width="544" height="432"/>
                                 <animations/>
                                 <userDefinedRuntimeAttributes>
@@ -300,10 +300,10 @@
             </objects>
             <point key="canvasLocation" x="767" y="1666"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--氏名 Nav-->
         <scene sceneID="E6r-FF-Sd4">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hgQ-e1-MPh" sceneMemberID="viewController">
+                <navigationController title="氏名 Nav" automaticallyAdjustsScrollViewInsets="NO" id="hgQ-e1-MPh" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="3Ku-yx-yIy"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wCp-26-qRb">
@@ -322,7 +322,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="nO8-gS-B5a"/>
-        <segue reference="Tll-UG-LXB"/>
+        <segue reference="ya8-Lh-Acb"/>
+        <segue reference="6S0-TO-JiA"/>
     </inferredMetricsTieBreakers>
 </document>
