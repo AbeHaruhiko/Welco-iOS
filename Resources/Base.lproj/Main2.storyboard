@@ -88,8 +88,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <glkView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" enableSetNeedsDisplay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bS5-Ai-Xds" customClass="PPSSignatureView">
-                                <rect key="frame" x="28" y="24" width="544" height="432"/>
+                            <glkView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bS5-Ai-Xds" customClass="PPSSignatureView">
+                                <rect key="frame" x="28" y="88" width="544" height="432"/>
                                 <animations/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
@@ -258,6 +258,9 @@
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="もどる"/>
+                                <connections>
+                                    <segue destination="s2I-kk-KE5" kind="custom" customClass="FromMemberDetailToCompanyNameSegue" customModule="Welco" customModuleProvider="target" id="nO8-gS-B5a"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUq-gH-etD">
                                 <rect key="frame" x="481" y="534" width="75" height="42"/>
@@ -285,7 +288,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S15-Fc-nqC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1579" y="1622"/>
+            <point key="canvasLocation" x="767" y="1666"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="E6r-FF-Sd4">
@@ -305,10 +308,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8lW-BK-hFH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="767" y="1622"/>
+            <point key="canvasLocation" x="-45" y="1654"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="nO8-gS-B5a"/>
         <segue reference="Tll-UG-LXB"/>
     </inferredMetricsTieBreakers>
 </document>
