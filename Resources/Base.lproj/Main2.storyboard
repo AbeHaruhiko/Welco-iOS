@@ -34,35 +34,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="0XM-y9-sOw">
+                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="0XM-y9-sOw">
                                 <rect key="frame" x="20" y="292" width="560" height="17"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" size="system"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfLines">
-                                        <integer key="value" value="0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="104" y="192" width="192" height="17"/>
+                                </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmN-X4-5aq">
-                                <rect key="frame" x="272" y="317" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPa-HK-zgw">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
-                                <state key="normal" title="次へ"/>
-                                <connections>
-                                    <segue destination="s2I-kk-KE5" kind="custom" customClass="FromMemberDetailToCompanyNameSegue" customModule="Welco" customModuleProvider="target" id="ya8-Lh-Acb"/>
-                                </connections>
+                                <state key="normal" title="Button"/>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="177" y="229" width="46" height="30"/>
+                                </variation>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="0XM-y9-sOw" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" constant="20" symbolic="YES" id="Tsc-yG-G1q"/>
-                            <constraint firstItem="0XM-y9-sOw" firstAttribute="centerY" secondItem="svH-Pt-448" secondAttribute="centerY" id="jWN-iV-94e"/>
-                            <constraint firstAttribute="trailing" secondItem="0XM-y9-sOw" secondAttribute="trailing" constant="20" symbolic="YES" id="tHV-ZD-HQj"/>
-                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="kPa-HK-zgw"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="kPa-HK-zgw"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="mOI-FS-AaM"/>
@@ -72,12 +75,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="737" y="129"/>
+            <point key="canvasLocation" x="738" y="165"/>
         </scene>
         <!--会社名入力-->
         <scene sceneID="e5g-Gf-Ibx">
             <objects>
-                <viewController title="会社名入力" id="HdT-Kx-BSg" sceneMemberID="viewController">
+                <viewController title="会社名入力" id="HdT-Kx-BSg" customClass="SignatureInputViewController" customModule="Welco" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YHG-GA-qO0"/>
                         <viewControllerLayoutGuide type="bottom" id="KxL-o9-rRI"/>
@@ -99,19 +102,35 @@
                                     <segue destination="H1p-Uh-vWS" kind="custom" customClass="FromMemberDetailToCompanyNameSegue" customModule="Welco" customModuleProvider="target" id="TJe-JX-ktk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ReH-x6-M1y">
+                                <rect key="frame" x="506" y="534" width="50" height="42"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="次へ"/>
+                                <connections>
+                                    <action selector="next:" destination="HdT-Kx-BSg" eventType="touchUpInside" id="gkK-ZP-5on"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="KxL-o9-rRI" firstAttribute="top" secondItem="ReH-x6-M1y" secondAttribute="bottom" constant="24" id="EBX-oU-VwP"/>
                             <constraint firstItem="bS5-Ai-Xds" firstAttribute="leading" secondItem="0k9-k2-vTc" secondAttribute="leadingMargin" constant="8" id="MEZ-TO-cd6"/>
                             <constraint firstItem="bS5-Ai-Xds" firstAttribute="top" secondItem="YHG-GA-qO0" secondAttribute="bottom" constant="8" id="SUD-i9-e5g"/>
                             <constraint firstItem="KxL-o9-rRI" firstAttribute="top" secondItem="pjj-dw-bqx" secondAttribute="bottom" constant="24" id="WHp-zG-win"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ReH-x6-M1y" secondAttribute="trailing" constant="24" id="lnz-3j-iHO"/>
                             <constraint firstItem="pjj-dw-bqx" firstAttribute="leading" secondItem="0k9-k2-vTc" secondAttribute="leadingMargin" constant="24" id="tPv-25-NDd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bS5-Ai-Xds" secondAttribute="trailing" constant="8" id="tU2-iQ-ldu"/>
                             <constraint firstItem="KxL-o9-rRI" firstAttribute="top" secondItem="bS5-Ai-Xds" secondAttribute="bottom" constant="80" id="v1U-gZ-l1F"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="備え付けのタッチペンまたは指で会社名を入力してください" id="Nmh-zx-Ba0"/>
+                    <navigationItem key="navigationItem" title="備え付けのタッチペンまたは指で会社名を入力してください" id="Nmh-zx-Ba0">
+                        <barButtonItem key="backBarButtonItem" title="もどる" id="sPQ-CE-rLO"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="nT2-a8-Jun" kind="push" identifier="PushToUserNameInputSegue" id="ZAE-WE-aUv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bYe-gX-wpq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -215,6 +234,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lmt-ng-Exu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-45" y="893"/>
+        </scene>
+        <!--氏名入力-->
+        <scene sceneID="4SK-Rd-OMl">
+            <objects>
+                <viewController title="会社名入力" id="nT2-a8-Jun" userLabel="氏名入力" customClass="SignatureInputViewController" customModule="Welco" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xrn-UT-xib"/>
+                        <viewControllerLayoutGuide type="bottom" id="hdR-LD-Atx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="siY-lX-wDw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <glkView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypR-0d-aLw" customClass="PPSSignatureView">
+                                <rect key="frame" x="28" y="72" width="544" height="448"/>
+                                <animations/>
+                            </glkView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYL-F5-Fnt">
+                                <rect key="frame" x="44" y="534" width="75" height="42"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="もどる"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QfR-TZ-D9U">
+                                <rect key="frame" x="506" y="534" width="50" height="42"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="次へ"/>
+                                <connections>
+                                    <action selector="next:" destination="nT2-a8-Jun" eventType="touchUpInside" id="3Ka-91-61g"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ypR-0d-aLw" firstAttribute="top" secondItem="xrn-UT-xib" secondAttribute="bottom" constant="8" id="2KX-6A-lin"/>
+                            <constraint firstItem="hdR-LD-Atx" firstAttribute="top" secondItem="QfR-TZ-D9U" secondAttribute="bottom" constant="24" id="4cs-Tp-2D9"/>
+                            <constraint firstItem="hdR-LD-Atx" firstAttribute="top" secondItem="ypR-0d-aLw" secondAttribute="bottom" constant="80" id="6Nj-zp-uQw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ypR-0d-aLw" secondAttribute="trailing" constant="8" id="DY9-vD-xcR"/>
+                            <constraint firstItem="hdR-LD-Atx" firstAttribute="top" secondItem="IYL-F5-Fnt" secondAttribute="bottom" constant="24" id="FgD-E1-hN4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QfR-TZ-D9U" secondAttribute="trailing" constant="24" id="Yha-lf-zsc"/>
+                            <constraint firstItem="IYL-F5-Fnt" firstAttribute="leading" secondItem="siY-lX-wDw" secondAttribute="leadingMargin" constant="24" id="b0g-ca-qa6"/>
+                            <constraint firstItem="ypR-0d-aLw" firstAttribute="leading" secondItem="siY-lX-wDw" secondAttribute="leadingMargin" constant="8" id="h3c-Db-dBr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="備え付けのタッチペンまたは指で氏名を入力してください" id="Fuc-yz-sHF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XRc-gE-cyl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-45" y="1701"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
