@@ -57,7 +57,7 @@ class MasterViewController: PFQueryTableViewController {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let object = self.objects?[indexPath.row] as! PFObject
                 let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
-                controller.detailItem = object
+                controller.selectedMember = object
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }

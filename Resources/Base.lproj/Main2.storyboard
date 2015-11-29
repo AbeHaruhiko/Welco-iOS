@@ -52,7 +52,7 @@
                                 <animations/>
                                 <state key="normal" title="次へ"/>
                                 <connections>
-                                    <segue destination="s2I-kk-KE5" kind="custom" customClass="FromMemberDetailToCompanyNameSegue" customModule="Welco" customModuleProvider="target" id="ya8-Lh-Acb"/>
+                                    <segue destination="s2I-kk-KE5" kind="custom" identifier="showCompanyName" customClass="FromMemberDetailToCompanyNameSegue" customModule="Welco" customModuleProvider="target" id="ya8-Lh-Acb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -79,7 +79,7 @@
         <!--会社名入力-->
         <scene sceneID="e5g-Gf-Ibx">
             <objects>
-                <viewController title="会社名入力" id="HdT-Kx-BSg" sceneMemberID="viewController">
+                <viewController title="会社名入力" id="HdT-Kx-BSg" customClass="CompanyNameViewController" customModule="Welco" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YHG-GA-qO0"/>
                         <viewControllerLayoutGuide type="bottom" id="KxL-o9-rRI"/>
@@ -110,7 +110,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="つぎへ"/>
                                 <connections>
-                                    <segue destination="hgQ-e1-MPh" kind="custom" customClass="FromMemberDetailToCompanyNameSegue" customModule="Welco" customModuleProvider="target" id="2dq-BQ-OsC"/>
+                                    <action selector="next:" destination="HdT-Kx-BSg" eventType="touchUpInside" id="24M-f1-bel"/>
+                                    <segue destination="hgQ-e1-MPh" kind="custom" identifier="showVisitorName" customClass="FromMemberDetailToCompanyNameSegue" customModule="Welco" customModuleProvider="target" id="2dq-BQ-OsC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -130,6 +131,9 @@
                     <navigationItem key="navigationItem" title="枠内に備え付けのタッチペンまたは指で会社名を記入してください" id="Nmh-zx-Ba0">
                         <barButtonItem key="backBarButtonItem" title="もどる" id="iyu-z8-MmD"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="companyName" destination="bS5-Ai-Xds" id="S9E-6B-3D2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bYe-gX-wpq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -237,7 +241,7 @@
         <!--氏名入力-->
         <scene sceneID="GCi-b0-3P9">
             <objects>
-                <viewController title="氏名入力" id="hmg-aF-x6U" sceneMemberID="viewController">
+                <viewController title="氏名入力" id="hmg-aF-x6U" customClass="VisitorNameViewController" customModule="Welco" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3cs-vW-vuz"/>
                         <viewControllerLayoutGuide type="bottom" id="UTl-xs-PEz"/>
@@ -267,6 +271,9 @@
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="つぎへ"/>
+                                <connections>
+                                    <action selector="next:" destination="hmg-aF-x6U" eventType="touchUpInside" id="SyV-gh-ZV3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -285,6 +292,9 @@
                     <navigationItem key="navigationItem" title="氏名を記入してください" id="V4Y-tq-rBh">
                         <barButtonItem key="backBarButtonItem" title="もどる" id="uaO-KD-uZl"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="visitorName" destination="9Je-hR-TCE" id="T3g-od-OSv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S15-Fc-nqC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
