@@ -47,8 +47,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmN-X4-5aq">
-                                <rect key="frame" x="272" y="317" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmN-X4-5aq">
+                                <rect key="frame" x="285" y="329" width="30" height="30"/>
                                 <animations/>
                                 <state key="normal" title="次へ"/>
                                 <connections>
@@ -59,9 +59,11 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="fmN-X4-5aq" firstAttribute="top" secondItem="0XM-y9-sOw" secondAttribute="bottom" constant="20" id="9wo-Jg-TfU"/>
                             <constraint firstItem="0XM-y9-sOw" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" constant="20" symbolic="YES" id="Tsc-yG-G1q"/>
                             <constraint firstItem="0XM-y9-sOw" firstAttribute="centerY" secondItem="svH-Pt-448" secondAttribute="centerY" id="jWN-iV-94e"/>
                             <constraint firstAttribute="trailing" secondItem="0XM-y9-sOw" secondAttribute="trailing" constant="20" symbolic="YES" id="tHV-ZD-HQj"/>
+                            <constraint firstItem="fmN-X4-5aq" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="uWD-Eh-DC9"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -72,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="737" y="129"/>
+            <point key="canvasLocation" x="737" y="129.00000000000003"/>
         </scene>
         <!--会社名入力-->
         <scene sceneID="e5g-Gf-Ibx">
@@ -115,7 +117,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bYe-gX-wpq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="767" y="893"/>
+            <point key="canvasLocation" x="767" y="893.00000000000011"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">
@@ -195,7 +197,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-45" y="129"/>
+            <point key="canvasLocation" x="-45" y="129.00000000000003"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RoS-VL-JRQ">
@@ -214,10 +216,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lmt-ng-Exu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-45" y="893"/>
+            <point key="canvasLocation" x="-45" y="893.00000000000011"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6S0-TO-JiA"/>
+        <segue reference="Tll-UG-LXB"/>
     </inferredMetricsTieBreakers>
 </document>
