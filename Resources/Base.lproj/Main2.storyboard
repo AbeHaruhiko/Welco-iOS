@@ -132,10 +132,10 @@
             </objects>
             <point key="canvasLocation" x="767" y="893"/>
         </scene>
-        <!--Split View Controller-->
+        <!--社員一覧・明細-->
         <scene sceneID="Nki-YV-4Qg">
             <objects>
-                <splitViewController id="H1p-Uh-vWS" sceneMemberID="viewController">
+                <splitViewController title="社員一覧・明細" id="H1p-Uh-vWS" sceneMemberID="viewController">
                     <toolbarItems/>
                     <connections>
                         <segue destination="RMx-3f-FxP" kind="relationship" relationship="masterViewController" id="BlO-5A-QYV"/>
@@ -261,6 +261,7 @@
                                 <state key="normal" title="つぎへ"/>
                                 <connections>
                                     <action selector="next:" destination="hmg-aF-x6U" eventType="touchUpInside" id="SyV-gh-ZV3"/>
+                                    <segue destination="pRo-Fx-f8H" kind="custom" customClass="FromMemberDetailToCompanyNameSegue" customModule="Welco" customModuleProvider="target" id="1qU-eG-LLx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -306,9 +307,46 @@
             </objects>
             <point key="canvasLocation" x="-45" y="1654"/>
         </scene>
+        <!--Thanks-->
+        <scene sceneID="NZm-fH-oDu">
+            <objects>
+                <viewController id="pRo-Fx-f8H" userLabel="Thanks" customClass="ThanksViewController" customModule="Welco" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2UU-vR-S0U"/>
+                        <viewControllerLayoutGuide type="bottom" id="QGz-lm-CnT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lyf-67-Ctx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GbY-k7-MnL">
+                                <rect key="frame" x="99" y="245" width="403" height="111"/>
+                                <string key="text">ありがとうございます。
+担当者を呼び出しています。
+少々お待ちくださいませ。</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GbY-k7-MnL" firstAttribute="centerX" secondItem="lyf-67-Ctx" secondAttribute="centerX" id="Rpt-Ye-Hxw"/>
+                            <constraint firstItem="GbY-k7-MnL" firstAttribute="centerY" secondItem="lyf-67-Ctx" secondAttribute="centerY" id="SFe-SG-Cz6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="H1p-Uh-vWS" kind="show" identifier="FromThanksToTopSegue" id="5hI-kU-sGm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EcN-b5-Jml" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-883" y="513"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6S0-TO-JiA"/>
         <segue reference="ya8-Lh-Acb"/>
+        <segue reference="Tll-UG-LXB"/>
+        <segue reference="5hI-kU-sGm"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		307753321C239831008B7380 /* Sound.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 307753311C239831008B7380 /* Sound.xcassets */; };
+		307753341C23A90C008B7380 /* ThanksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307753331C23A90C008B7380 /* ThanksViewController.swift */; };
 		30A8B1A11C0AD55C0059BCC8 /* CompanyNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A8B1A01C0AD55C0059BCC8 /* CompanyNameViewController.swift */; };
 		30A8B1A31C0AE0100059BCC8 /* Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A8B1A21C0AE0100059BCC8 /* Signature.swift */; };
 		30A8B1A91C0B34820059BCC8 /* VisitorNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A8B1A81C0B34820059BCC8 /* VisitorNameViewController.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		1923512DF9F87C5EA6EA9F3A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		307753311C239831008B7380 /* Sound.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Sound.xcassets; sourceTree = "<group>"; };
+		307753331C23A90C008B7380 /* ThanksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThanksViewController.swift; sourceTree = "<group>"; };
 		30A8B1A01C0AD55C0059BCC8 /* CompanyNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyNameViewController.swift; sourceTree = "<group>"; };
 		30A8B1A21C0AE0100059BCC8 /* Signature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signature.swift; sourceTree = "<group>"; };
 		30A8B1A81C0B34820059BCC8 /* VisitorNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorNameViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				30F208A51C0433F20049E4FC /* FromMemberDetailToCompanyNameSegue.swift */,
 				30A8B1A01C0AD55C0059BCC8 /* CompanyNameViewController.swift */,
 				30A8B1A21C0AE0100059BCC8 /* Signature.swift */,
+				307753331C23A90C008B7380 /* ThanksViewController.swift */,
 			);
 			path = "Welco-iOS";
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				30F208AF1C048EB60049E4FC /* ViewController.swift in Sources */,
 				30F208B01C048EB60049E4FC /* FromMemberDetailToCompanyNameSegue.swift in Sources */,
 				30F208B11C048EB60049E4FC /* AppDelegate.swift in Sources */,
+				307753341C23A90C008B7380 /* ThanksViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
