@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		30A8B19F1C05EAB90059BCC8 /* SignatureInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A8B19E1C05EAB90059BCC8 /* SignatureInputViewController.swift */; };
+		30A8B1A11C0AD55C0059BCC8 /* CompanyNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A8B1A01C0AD55C0059BCC8 /* CompanyNameViewController.swift */; };
+		30A8B1A31C0AE0100059BCC8 /* Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A8B1A21C0AE0100059BCC8 /* Signature.swift */; };
+		30A8B1A91C0B34820059BCC8 /* VisitorNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A8B1A81C0B34820059BCC8 /* VisitorNameViewController.swift */; };
 		30F208AD1C048EB60049E4FC /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B7C5801C01782A0062499D /* MasterViewController.swift */; };
 		30F208AE1C048EB60049E4FC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B7C57F1C01782A0062499D /* DetailViewController.swift */; };
 		30F208AF1C048EB60049E4FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA814C1A49DA1800E65899 /* ViewController.swift */; };
@@ -29,7 +31,9 @@
 
 /* Begin PBXFileReference section */
 		1923512DF9F87C5EA6EA9F3A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		30A8B19E1C05EAB90059BCC8 /* SignatureInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignatureInputViewController.swift; sourceTree = "<group>"; };
+		30A8B1A01C0AD55C0059BCC8 /* CompanyNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyNameViewController.swift; sourceTree = "<group>"; };
+		30A8B1A21C0AE0100059BCC8 /* Signature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signature.swift; sourceTree = "<group>"; };
+		30A8B1A81C0B34820059BCC8 /* VisitorNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorNameViewController.swift; sourceTree = "<group>"; };
 		30B7C57F1C01782A0062499D /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		30B7C5801C01782A0062499D /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		30F208A31C042FC10049E4FC /* PPSSignatureView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PPSSignatureView.framework; path = "Pods/../build/Debug-iphoneos/PPSSignatureView.framework"; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 		81BA81471A49DA1800E65899 /* Welco-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				30A8B1A81C0B34820059BCC8 /* VisitorNameViewController.swift */,
 				30F208A71C0438060049E4FC /* Main2.storyboard */,
 				30B7C57F1C01782A0062499D /* DetailViewController.swift */,
 				30B7C5801C01782A0062499D /* MasterViewController.swift */,
@@ -123,7 +128,8 @@
 				81BA814C1A49DA1800E65899 /* ViewController.swift */,
 				814C3AC61B69877600E307BB /* Main.storyboard */,
 				30F208A51C0433F20049E4FC /* FromMemberDetailToCompanyNameSegue.swift */,
-				30A8B19E1C05EAB90059BCC8 /* SignatureInputViewController.swift */,
+				30A8B1A01C0AD55C0059BCC8 /* CompanyNameViewController.swift */,
+				30A8B1A21C0AE0100059BCC8 /* Signature.swift */,
 			);
 			path = "Welco-iOS";
 			sourceTree = "<group>";
@@ -287,8 +293,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				30F208AD1C048EB60049E4FC /* MasterViewController.swift in Sources */,
+				30A8B1A11C0AD55C0059BCC8 /* CompanyNameViewController.swift in Sources */,
+				30A8B1A91C0B34820059BCC8 /* VisitorNameViewController.swift in Sources */,
+				30A8B1A31C0AE0100059BCC8 /* Signature.swift in Sources */,
 				30F208AE1C048EB60049E4FC /* DetailViewController.swift in Sources */,
-				30A8B19F1C05EAB90059BCC8 /* SignatureInputViewController.swift in Sources */,
 				30F208AF1C048EB60049E4FC /* ViewController.swift in Sources */,
 				30F208B01C048EB60049E4FC /* FromMemberDetailToCompanyNameSegue.swift in Sources */,
 				30F208B11C048EB60049E4FC /* AppDelegate.swift in Sources */,

@@ -14,7 +14,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
 
-    var detailItem: PFObject? {
+    var selectedMember: PFObject? {
         didSet {
             // Update the view.
             self.configureView()
@@ -23,9 +23,9 @@ class DetailViewController: UIViewController {
 
     func configureView() {
         // Update the user interface for the detail item.
-        if let detail: PFObject = self.detailItem {
+        if let selectedMember: PFObject = self.selectedMember {
             if let label = self.detailDescriptionLabel {
-                label.text = (detail["name"] as? String)! + "とご面会ですね？"
+                label.text = (selectedMember["name"] as? String)! + "とご面会ですね？"
             }
         } else {
             if let label = self.detailDescriptionLabel {
@@ -45,6 +45,14 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    // MARK: - Segues
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showCompanyName" {
+            let object = self.selectedMember
+            let controller = (segue.destinationViewController as! UINavigationController).topViewController as! CompanyNameViewController
+            controller.selectedMember = object
+        }
+    }
 }
 

@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--社員一覧-->
+        <!--社員一覧 Nav-->
         <scene sceneID="pY4-Hu-kfo">
             <objects>
-                <navigationController title="社員一覧" id="RMx-3f-FxP" sceneMemberID="viewController">
+                <navigationController title="社員一覧 Nav" id="RMx-3f-FxP" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Pmd-2v-anx">
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="7bK-jq-Zjz" kind="relationship" relationship="rootViewController" id="tsl-Nk-0bq"/>
@@ -34,38 +33,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="0XM-y9-sOw">
+                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="0XM-y9-sOw">
                                 <rect key="frame" x="20" y="292" width="560" height="17"/>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" size="system"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="104" y="192" width="192" height="17"/>
-                                </variation>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfLines">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPa-HK-zgw">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Button"/>
-                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="177" y="229" width="46" height="30"/>
-                                </variation>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmN-X4-5aq">
+                                <rect key="frame" x="285" y="329" width="30" height="30"/>
+                                <state key="normal" title="次へ"/>
+                                <connections>
+                                    <segue destination="s2I-kk-KE5" kind="custom" identifier="showCompanyName" customClass="FromMemberDetailToCompanyNameSegue" customModule="Welco" customModuleProvider="target" id="ya8-Lh-Acb"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="kPa-HK-zgw"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=compact-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="kPa-HK-zgw"/>
-                            </mask>
-                        </variation>
+                        <constraints>
+                            <constraint firstItem="fmN-X4-5aq" firstAttribute="top" secondItem="0XM-y9-sOw" secondAttribute="bottom" constant="20" id="9wo-Jg-TfU"/>
+                            <constraint firstItem="0XM-y9-sOw" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" constant="20" symbolic="YES" id="Tsc-yG-G1q"/>
+                            <constraint firstItem="0XM-y9-sOw" firstAttribute="centerY" secondItem="svH-Pt-448" secondAttribute="centerY" id="jWN-iV-94e"/>
+                            <constraint firstAttribute="trailing" secondItem="0XM-y9-sOw" secondAttribute="trailing" constant="20" symbolic="YES" id="tHV-ZD-HQj"/>
+                            <constraint firstItem="fmN-X4-5aq" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="uWD-Eh-DC9"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="mOI-FS-AaM"/>
@@ -75,12 +70,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="738" y="165"/>
+            <point key="canvasLocation" x="737" y="129.00000000000003"/>
         </scene>
-        <!--会社名入力-->
+        <!--社名入力-->
         <scene sceneID="e5g-Gf-Ibx">
             <objects>
-                <viewController title="会社名入力" id="HdT-Kx-BSg" customClass="SignatureInputViewController" customModule="Welco" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="社名入力" id="HdT-Kx-BSg" customClass="CompanyNameViewController" customModule="Welco" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YHG-GA-qO0"/>
                         <viewControllerLayoutGuide type="bottom" id="KxL-o9-rRI"/>
@@ -90,46 +85,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <glkView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bS5-Ai-Xds" customClass="PPSSignatureView">
-                                <rect key="frame" x="28" y="72" width="544" height="448"/>
-                                <animations/>
+                                <rect key="frame" x="28" y="88" width="544" height="432"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                </userDefinedRuntimeAttributes>
                             </glkView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjj-dw-bqx">
                                 <rect key="frame" x="44" y="534" width="75" height="42"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="もどる"/>
                                 <connections>
                                     <segue destination="H1p-Uh-vWS" kind="custom" customClass="FromMemberDetailToCompanyNameSegue" customModule="Welco" customModuleProvider="target" id="TJe-JX-ktk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ReH-x6-M1y">
-                                <rect key="frame" x="506" y="534" width="50" height="42"/>
-                                <animations/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SiO-sh-QPC">
+                                <rect key="frame" x="481" y="534" width="75" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="次へ"/>
+                                <state key="normal" title="つぎへ"/>
                                 <connections>
-                                    <action selector="next:" destination="HdT-Kx-BSg" eventType="touchUpInside" id="gkK-ZP-5on"/>
+                                    <action selector="next:" destination="HdT-Kx-BSg" eventType="touchUpInside" id="24M-f1-bel"/>
+                                    <segue destination="hgQ-e1-MPh" kind="custom" identifier="showVisitorName" customClass="FromMemberDetailToCompanyNameSegue" customModule="Welco" customModuleProvider="target" id="2dq-BQ-OsC"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="KxL-o9-rRI" firstAttribute="top" secondItem="ReH-x6-M1y" secondAttribute="bottom" constant="24" id="EBX-oU-VwP"/>
                             <constraint firstItem="bS5-Ai-Xds" firstAttribute="leading" secondItem="0k9-k2-vTc" secondAttribute="leadingMargin" constant="8" id="MEZ-TO-cd6"/>
-                            <constraint firstItem="bS5-Ai-Xds" firstAttribute="top" secondItem="YHG-GA-qO0" secondAttribute="bottom" constant="8" id="SUD-i9-e5g"/>
+                            <constraint firstItem="KxL-o9-rRI" firstAttribute="top" secondItem="SiO-sh-QPC" secondAttribute="bottom" constant="24" id="MFs-rR-QxW"/>
+                            <constraint firstItem="bS5-Ai-Xds" firstAttribute="top" secondItem="YHG-GA-qO0" secondAttribute="bottom" constant="24" id="SUD-i9-e5g"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SiO-sh-QPC" secondAttribute="trailing" constant="24" id="W96-hY-1qP"/>
                             <constraint firstItem="KxL-o9-rRI" firstAttribute="top" secondItem="pjj-dw-bqx" secondAttribute="bottom" constant="24" id="WHp-zG-win"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ReH-x6-M1y" secondAttribute="trailing" constant="24" id="lnz-3j-iHO"/>
                             <constraint firstItem="pjj-dw-bqx" firstAttribute="leading" secondItem="0k9-k2-vTc" secondAttribute="leadingMargin" constant="24" id="tPv-25-NDd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bS5-Ai-Xds" secondAttribute="trailing" constant="8" id="tU2-iQ-ldu"/>
                             <constraint firstItem="KxL-o9-rRI" firstAttribute="top" secondItem="bS5-Ai-Xds" secondAttribute="bottom" constant="80" id="v1U-gZ-l1F"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="備え付けのタッチペンまたは指で会社名を入力してください" id="Nmh-zx-Ba0">
-                        <barButtonItem key="backBarButtonItem" title="もどる" id="sPQ-CE-rLO"/>
+                    <navigationItem key="navigationItem" title="枠内に備え付けのタッチペンまたは指で会社名を記入してください" id="Nmh-zx-Ba0">
+                        <barButtonItem key="backBarButtonItem" title="もどる" id="iyu-z8-MmD"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="nT2-a8-Jun" kind="push" identifier="PushToUserNameInputSegue" id="ZAE-WE-aUv"/>
+                        <outlet property="companyName" destination="bS5-Ai-Xds" id="S9E-6B-3D2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bYe-gX-wpq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -154,31 +149,34 @@
         <scene sceneID="smW-Zh-WAh">
             <objects>
                 <tableViewController title="社員一覧" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" customModule="Welco" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Arm-wq-HPj" style="IBUITableViewCellStyleDefault" id="WCw-Qf-5nD">
-                                <rect key="frame" x="0.0" y="86" width="600" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Arm-wq-HPj" detailTextLabel="aRc-hR-jZm" rowHeight="56" style="IBUITableViewCellStyleSubtitle" id="WCw-Qf-5nD">
+                                <rect key="frame" x="0.0" y="86" width="600" height="56"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Arm-wq-HPj">
-                                            <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" placeholderIntrinsicWidth="570" placeholderIntrinsicHeight="147" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Arm-wq-HPj">
+                                            <rect key="frame" x="15" y="11" width="32" height="20"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aRc-hR-jZm">
+                                            <rect key="frame" x="15" y="31" width="31" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <animations/>
                                 </tableViewCellContentView>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showDetail" id="6S0-TO-JiA"/>
@@ -192,21 +190,17 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="社員一覧" id="Zdf-7t-Un8"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="parseClassName" value="Member"/>
-                    </userDefinedRuntimeAttributes>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="709" y="-630"/>
         </scene>
-        <!--面会社員-->
+        <!--面会社員 Nav-->
         <scene sceneID="r7l-gg-dq7">
             <objects>
-                <navigationController title="面会社員" id="vC3-pB-5Vb" sceneMemberID="viewController">
+                <navigationController title="面会社員 Nav" id="vC3-pB-5Vb" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="DjV-YW-jjY">
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="JEX-9P-axG" kind="relationship" relationship="rootViewController" id="GKi-kA-LjT"/>
@@ -214,17 +208,16 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-45" y="129"/>
+            <point key="canvasLocation" x="-45" y="129.00000000000003"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--社名入力 Nav-->
         <scene sceneID="RoS-VL-JRQ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s2I-kk-KE5" sceneMemberID="viewController">
+                <navigationController title="社名入力 Nav" automaticallyAdjustsScrollViewInsets="NO" id="s2I-kk-KE5" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xbW-XV-I3V">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -233,61 +226,88 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lmt-ng-Exu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-45" y="893"/>
+            <point key="canvasLocation" x="-45" y="893.00000000000011"/>
         </scene>
         <!--氏名入力-->
-        <scene sceneID="4SK-Rd-OMl">
+        <scene sceneID="GCi-b0-3P9">
             <objects>
-                <viewController title="会社名入力" id="nT2-a8-Jun" userLabel="氏名入力" customClass="SignatureInputViewController" customModule="Welco" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="氏名入力" id="hmg-aF-x6U" customClass="VisitorNameViewController" customModule="Welco" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xrn-UT-xib"/>
-                        <viewControllerLayoutGuide type="bottom" id="hdR-LD-Atx"/>
+                        <viewControllerLayoutGuide type="top" id="3cs-vW-vuz"/>
+                        <viewControllerLayoutGuide type="bottom" id="UTl-xs-PEz"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="siY-lX-wDw">
+                    <view key="view" contentMode="scaleToFill" id="ZYW-iq-em9">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <glkView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypR-0d-aLw" customClass="PPSSignatureView">
-                                <rect key="frame" x="28" y="72" width="544" height="448"/>
-                                <animations/>
+                            <glkView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Je-hR-TCE" customClass="PPSSignatureView">
+                                <rect key="frame" x="28" y="88" width="544" height="432"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                </userDefinedRuntimeAttributes>
                             </glkView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYL-F5-Fnt">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzY-7r-yS0">
                                 <rect key="frame" x="44" y="534" width="75" height="42"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="もどる"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QfR-TZ-D9U">
-                                <rect key="frame" x="506" y="534" width="50" height="42"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="次へ"/>
                                 <connections>
-                                    <action selector="next:" destination="nT2-a8-Jun" eventType="touchUpInside" id="3Ka-91-61g"/>
+                                    <segue destination="s2I-kk-KE5" kind="custom" customClass="FromMemberDetailToCompanyNameSegue" customModule="Welco" customModuleProvider="target" id="nO8-gS-B5a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUq-gH-etD">
+                                <rect key="frame" x="481" y="534" width="75" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="つぎへ"/>
+                                <connections>
+                                    <action selector="next:" destination="hmg-aF-x6U" eventType="touchUpInside" id="SyV-gh-ZV3"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ypR-0d-aLw" firstAttribute="top" secondItem="xrn-UT-xib" secondAttribute="bottom" constant="8" id="2KX-6A-lin"/>
-                            <constraint firstItem="hdR-LD-Atx" firstAttribute="top" secondItem="QfR-TZ-D9U" secondAttribute="bottom" constant="24" id="4cs-Tp-2D9"/>
-                            <constraint firstItem="hdR-LD-Atx" firstAttribute="top" secondItem="ypR-0d-aLw" secondAttribute="bottom" constant="80" id="6Nj-zp-uQw"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ypR-0d-aLw" secondAttribute="trailing" constant="8" id="DY9-vD-xcR"/>
-                            <constraint firstItem="hdR-LD-Atx" firstAttribute="top" secondItem="IYL-F5-Fnt" secondAttribute="bottom" constant="24" id="FgD-E1-hN4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="QfR-TZ-D9U" secondAttribute="trailing" constant="24" id="Yha-lf-zsc"/>
-                            <constraint firstItem="IYL-F5-Fnt" firstAttribute="leading" secondItem="siY-lX-wDw" secondAttribute="leadingMargin" constant="24" id="b0g-ca-qa6"/>
-                            <constraint firstItem="ypR-0d-aLw" firstAttribute="leading" secondItem="siY-lX-wDw" secondAttribute="leadingMargin" constant="8" id="h3c-Db-dBr"/>
+                            <constraint firstItem="9Je-hR-TCE" firstAttribute="top" secondItem="3cs-vW-vuz" secondAttribute="bottom" constant="24" id="BlF-BU-2gt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Je-hR-TCE" secondAttribute="trailing" constant="8" id="Ccn-lF-3Qb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uUq-gH-etD" secondAttribute="trailing" constant="24" id="Iec-dR-jD9"/>
+                            <constraint firstItem="UTl-xs-PEz" firstAttribute="top" secondItem="dzY-7r-yS0" secondAttribute="bottom" constant="24" id="dvD-C0-0dS"/>
+                            <constraint firstItem="UTl-xs-PEz" firstAttribute="top" secondItem="9Je-hR-TCE" secondAttribute="bottom" constant="80" id="eUj-tF-Pbh"/>
+                            <constraint firstItem="9Je-hR-TCE" firstAttribute="leading" secondItem="ZYW-iq-em9" secondAttribute="leadingMargin" constant="8" id="gkF-RR-PVT"/>
+                            <constraint firstItem="dzY-7r-yS0" firstAttribute="leading" secondItem="ZYW-iq-em9" secondAttribute="leadingMargin" constant="24" id="khK-Ld-Pc8"/>
+                            <constraint firstItem="UTl-xs-PEz" firstAttribute="top" secondItem="uUq-gH-etD" secondAttribute="bottom" constant="24" id="luk-G1-IdI"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="備え付けのタッチペンまたは指で氏名を入力してください" id="Fuc-yz-sHF"/>
+                    <navigationItem key="navigationItem" title="氏名を記入してください" id="V4Y-tq-rBh">
+                        <barButtonItem key="backBarButtonItem" title="もどる" id="uaO-KD-uZl"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="visitorName" destination="9Je-hR-TCE" id="T3g-od-OSv"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XRc-gE-cyl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S15-Fc-nqC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-45" y="1701"/>
+            <point key="canvasLocation" x="767" y="1666"/>
+        </scene>
+        <!--氏名 Nav-->
+        <scene sceneID="E6r-FF-Sd4">
+            <objects>
+                <navigationController title="氏名 Nav" automaticallyAdjustsScrollViewInsets="NO" id="hgQ-e1-MPh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="3Ku-yx-yIy"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wCp-26-qRb">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hmg-aF-x6U" kind="relationship" relationship="rootViewController" id="Stc-0W-RHc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8lW-BK-hFH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-45" y="1654"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="6S0-TO-JiA"/>
+        <segue reference="ya8-Lh-Acb"/>
     </inferredMetricsTieBreakers>
 </document>
