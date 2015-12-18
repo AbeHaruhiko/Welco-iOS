@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		307753321C239831008B7380 /* Sound.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 307753311C239831008B7380 /* Sound.xcassets */; };
 		30A8B1A11C0AD55C0059BCC8 /* CompanyNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A8B1A01C0AD55C0059BCC8 /* CompanyNameViewController.swift */; };
 		30A8B1A31C0AE0100059BCC8 /* Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A8B1A21C0AE0100059BCC8 /* Signature.swift */; };
 		30A8B1A91C0B34820059BCC8 /* VisitorNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A8B1A81C0B34820059BCC8 /* VisitorNameViewController.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		1923512DF9F87C5EA6EA9F3A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		307753311C239831008B7380 /* Sound.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Sound.xcassets; sourceTree = "<group>"; };
 		30A8B1A01C0AD55C0059BCC8 /* CompanyNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyNameViewController.swift; sourceTree = "<group>"; };
 		30A8B1A21C0AE0100059BCC8 /* Signature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signature.swift; sourceTree = "<group>"; };
 		30A8B1A81C0B34820059BCC8 /* VisitorNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorNameViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			children = (
 				814C3AC81B69877600E307BB /* Images.xcassets */,
 				814C3AC91B69877600E307BB /* Info.plist */,
+				307753311C239831008B7380 /* Sound.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				30F208BD1C048EB60049E4FC /* Main.storyboard in Resources */,
 				30F208BE1C048EB60049E4FC /* Main2.storyboard in Resources */,
 				30F208BF1C048EB60049E4FC /* Images.xcassets in Resources */,
+				307753321C239831008B7380 /* Sound.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

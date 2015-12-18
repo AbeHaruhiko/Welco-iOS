@@ -8,10 +8,13 @@
 
 import UIKit
 import Parse
+import AVFoundation
 
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
+
+    private var alarmAudioPlayer: AVAudioPlayer?
 
 
     var selectedMember: PFObject? {
@@ -38,6 +41,8 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
+        
+        self.prepareSound("se_maoudamashii_chime10")
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,6 +58,26 @@ class DetailViewController: UIViewController {
             let controller = (segue.destinationViewController as! UINavigationController).topViewController as! CompanyNameViewController
             controller.selectedMember = object
         }
+    }
+    
+    @IBAction func next() {
+        playSound()
+    }
+    
+    func prepareSound(nameOfAudioFileInAssetCatalog: String) {
+        if let sound = NSDataAsset(name: nameOfAudioFileInAssetCatalog) {
+            do {
+                try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+                try! AVAudioSession.sharedInstance().setActive(true)
+                try alarmAudioPlayer = AVAudioPlayer(data: sound.data, fileTypeHint: "wav")
+            } catch {
+                print("error initializing AVAudioPlayer")
+            }
+        }
+    }
+
+    func playSound() {
+        alarmAudioPlayer!.play()
     }
 }
 

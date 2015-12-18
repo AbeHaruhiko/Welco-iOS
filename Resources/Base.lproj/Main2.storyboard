@@ -49,6 +49,7 @@
                                 <rect key="frame" x="285" y="329" width="30" height="30"/>
                                 <state key="normal" title="次へ"/>
                                 <connections>
+                                    <action selector="next" destination="JEX-9P-axG" eventType="touchUpInside" id="wBp-0W-80T"/>
                                     <segue destination="s2I-kk-KE5" kind="custom" identifier="showCompanyName" customClass="FromMemberDetailToCompanyNameSegue" customModule="Welco" customModuleProvider="target" id="ya8-Lh-Acb"/>
                                 </connections>
                             </button>
