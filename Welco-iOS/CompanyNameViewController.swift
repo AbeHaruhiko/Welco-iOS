@@ -22,17 +22,16 @@ class CompanyNameViewController: UIViewController {
             self.visitorInfo = self.visitorInfo ?? PFObject(className: "VisitorInfo")
             self.visitorInfo!["member"] = self.selectedMember
         }
-        Signature.save(visitorInfo: self.visitorInfo, signatureType: Signature.SignatureType.Company, uiImage: companyName.signatureImage)
-
+        Signature.save(visitorInfo: self.visitorInfo, signatureType: Signature.SignatureType.Company, uiImage: companyName.signatureImage, successCallback: nil, errorCallback: nil)
     }
 
     // MARK: - Segues
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showVisitorName" {
-            let object = self.visitorInfo
             let controller = (segue.destinationViewController as! UINavigationController).topViewController as! VisitorNameViewController
-            controller.visitorInfo = object
+            controller.selectedMember = self.selectedMember
+            controller.visitorInfo = self.visitorInfo
         }
     }
 }
